@@ -42,6 +42,6 @@
             }
         } while (reponse !== nbMystere);
 
-    alert(`Vous avez trouvé, ${nbMystere}, en, ${nbEssaie}, d'essaie`);
+    alert(`Vous avez trouvé ${nbMystere} en ${nbEssaie} essaie`);
 
 }()); // main IIFE
