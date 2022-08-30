@@ -1,6 +1,6 @@
 /**
 * Jeu du nombre mystère
-* @author  Steve Fallet
+* @author  Mathilde Mertz
 * @version 0.1
 * @since   2018-09-09 (date de création)
 */
