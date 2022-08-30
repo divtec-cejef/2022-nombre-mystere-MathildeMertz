@@ -22,24 +22,24 @@
         return Math.floor(Math.random() * (max - min) + min);
     }
 
-    let nbEssaie;
+    let nbEssaie = 0;
     let nbMystere = tireNombre(minimum, maximum);
-    let reponse;
+    let reponse = 0;
 
+    reponse = Number(prompt(`Entrez un nombre compris en, ${minimum}, et, ${minimum},.`));
         do {
-            reponse = Number(prompt('Entrez un nombre compris en 1 et 100'));
+            nbEssaie++;
             if (isNaN(reponse) && reponse < minimum && reponse > maximum) {
-                alert('Veuillez entrez un nombre valide !');
+                alert(prompt('Veuillez entrez un nombre valide !'));
+                nbEssaie--;
             } else if (reponse < nbMystere) {
-                alert('Cest plus !');
-                nbEssaie++;
+                alert(prompt('Cest plus !'));
+
             } else if (reponse > nbMystere) {
-                alert('Cest moins !');
-                nbEssaie++;
-            } else {
-                alert(`Vous avez trouvé, ${nbMystere}, en, ${nbEssaie}, d'essaie`);
-                nbEssaie++;
+                alert(prompt('Cest moins !'));
             }
-        } while (reponse === nbMystere);
+        } while (reponse !== nbMystere);
+
+    alert(`Vous avez trouvé, ${nbMystere}, en, ${nbEssaie}, d'essaie`);
 
 }()); // main IIFE
