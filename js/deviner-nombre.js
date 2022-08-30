@@ -8,8 +8,8 @@
 // Main IIFE (Immediately-Invoked Function Expression, se prononce "iffy")
 (function main() {
     'use strict';
-    const minimum = 1;
-    const maximum = 100;
+    const MINIMUM = 1;
+    const MAXIMUM = 100;
 
     /**
      *
@@ -23,7 +23,7 @@
     }
 
     let nbEssaie = 0;
-    let nbMystere = tireNombre(minimum, maximum);
+    let nbMystere = tireNombre(MINIMUM, MAXIMUM);
     let reponse = 0;
     let message = 'Entrez un nombre compris entre 1 et 100: ';
 
@@ -31,7 +31,7 @@
         do {
             reponse = Number(prompt(message));
             nbEssaie++;
-            if (isNaN(reponse) && reponse < minimum && reponse > maximum) {
+            if (isNaN(reponse) && reponse < MINIMUM && reponse > MAXIMUM) {
                 message = 'Veuillez entrez un nombre valide !';
                 nbEssaie--;
             } else if (reponse < nbMystere) {
