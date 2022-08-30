@@ -25,18 +25,20 @@
     let nbEssaie = 0;
     let nbMystere = tireNombre(minimum, maximum);
     let reponse = 0;
+    let message = 'Entrez un nombre compris entre 1 et 100: ';
 
-    reponse = Number(prompt(`Entrez un nombre compris en, ${minimum}, et, ${minimum},.`));
+
         do {
+            reponse = Number(prompt(message));
             nbEssaie++;
             if (isNaN(reponse) && reponse < minimum && reponse > maximum) {
-                alert(prompt('Veuillez entrez un nombre valide !'));
+                message = 'Veuillez entrez un nombre valide !';
                 nbEssaie--;
             } else if (reponse < nbMystere) {
-                alert(prompt('Cest plus !'));
+                message = 'Cest plus !';
 
             } else if (reponse > nbMystere) {
-                alert(prompt('Cest moins !'));
+               message = 'Cest moins !';
             }
         } while (reponse !== nbMystere);
 
